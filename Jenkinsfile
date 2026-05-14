@@ -1,3 +1,4 @@
+```groovy
 pipeline {
     agent any
 
@@ -9,16 +10,33 @@ pipeline {
             }
         }
 
-        stage('Docker Build') {
-            steps {
-                sh 'docker compose build'
-            }
-        }
+        stage('Deploy to AWS EC2') {
 
-        stage('Run Containers') {
             steps {
-                sh 'docker compose up -d'
+
+                sshagent(credentials: ['aws-ec2-key']) {
+
+                    sh '''
+                    ssh -o StrictHostKeyChecking=no ubuntu@65.2.129.28 "
+
+                    cd smartnotes-project &&
+
+                    git pull origin main &&
+
+                    cd backend &&
+
+                    mvn clean package &&
+
+                    cd .. &&
+
+                    docker compose down &&
+
+                    docker compose up --build -d
+                    "
+                    '''
+                }
             }
         }
     }
 }
+```
