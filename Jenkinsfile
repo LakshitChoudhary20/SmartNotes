@@ -9,14 +9,6 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                dir('backend') {
-                    sh './mvnw clean package'
-                }
-            }
-        }
-
         stage('Docker Build') {
             steps {
                 sh 'docker compose build'
