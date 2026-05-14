@@ -1,42 +1,43 @@
-```groovy
 pipeline {
-    agent any
+agent any
 
-    stages {
+```
+stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
+    stage('Checkout') {
+        steps {
+            checkout scm
         }
+    }
 
-        stage('Deploy to AWS EC2') {
+    stage('Deploy to AWS EC2') {
 
-            steps {
+        steps {
 
-                sshagent(credentials: ['aws-ec2-key']) {
+            sshagent(credentials: ['aws-ec2-key']) {
 
-                    sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@65.2.129.28 "
+                sh '''
+                ssh -o StrictHostKeyChecking=no ubuntu@65.2.129.28 "
 
-                    cd smartnotes-project &&
+                cd smartnotes-project &&
 
-                    git pull origin main &&
+                git pull origin main &&
 
-                    cd backend &&
+                cd backend &&
 
-                    mvn clean package &&
+                mvn clean package &&
 
-                    cd .. &&
+                cd .. &&
 
-                    docker compose down &&
+                docker compose down &&
 
-                    docker compose up --build -d
-                    "
-                    '''
-                }
+                docker compose up --build -d
+                "
+                '''
             }
         }
     }
 }
 ```
+
+}
