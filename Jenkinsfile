@@ -25,12 +25,6 @@ stages {
 
                 git pull origin main &&
 
-                cd backend &&
-
-                mvn clean package &&
-
-                cd .. &&
-
                 docker compose down &&
 
                 docker compose up --build -d
