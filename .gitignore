@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build directories
+backend/target/
+frontend/dist/
+frontend/build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.pem
