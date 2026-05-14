@@ -1,5 +1,4 @@
-const API = "http://localhost:8081/notes";
-
+const API = "http://65.2.129.28:8081/notes";
 async function loadNotes() {
     const response = await fetch(API);
     const notes = await response.json();
