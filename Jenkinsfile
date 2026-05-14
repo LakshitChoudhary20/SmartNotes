@@ -14,10 +14,10 @@ stages {
 
         steps {
 
-            sshagent(credentials: ['aws-ec2-key']) {
+            withCredentials([sshUserPrivateKey(credentialsId: 'aws-ec2-key', keyFileVariable: 'SSH_KEY')]) {
 
                 sh '''
-                ssh -o StrictHostKeyChecking=no ubuntu@65.2.129.28 "
+                ssh -i $SSH_KEY -o StrictHostKeyChecking=no ubuntu@65.2.129.28 "
 
                 cd smartnotes-project &&
 
