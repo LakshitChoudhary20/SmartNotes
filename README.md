@@ -52,21 +52,9 @@
 ![Adding a New Note](screenshots/02_add_note.png)
 > *Filling in the title and content fields and clicking "Add Note".*
 
-### Notes List — After Adding Notes
-![Notes List](screenshots/03_notes_list.png)
-> *Multiple notes displayed on the page fetched from the PostgreSQL database via the Spring Boot API.*
-
 ### Backend REST API — `/notes` Endpoint
 ![Backend API Response](screenshots/05_api_response.png)
 > *Raw JSON response from `http://65.2.129.28:8081/notes` showing all stored notes.*
-
-### GitHub Actions CI Pipeline — Build Success
-![GitHub Actions CI](screenshots/06_github_actions_ci.png)
-> *GitHub Actions workflow triggered on push to `main` — builds the Spring Boot backend using Maven.*
-
-### Jenkins CD Pipeline — Deployment to AWS EC2
-![Jenkins Pipeline](screenshots/07_jenkins_pipeline.png)
-> *Jenkins pipeline with Checkout and Deploy stages, showing successful deployment to the EC2 instance.*
 
 ### Docker Containers Running on EC2
 ![Docker Containers on EC2](screenshots/08_docker_ps.png)
