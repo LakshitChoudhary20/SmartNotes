@@ -16,11 +16,11 @@
 </p>
 
 <p>
-  <a href="https://github.com/abhinavshiv7/smartnotes-project/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/abhinavshiv7/smartnotes-project/ci.yml?branch=main&label=CI%20Build&style=flat-square&logo=github" alt="CI Status"/>
+  <a href="https://github.com/lakshitchoudhary20/smartnotes/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/lakshitchoudhary20/smartnotes/ci.yml?branch=main&label=CI%20Build&style=flat-square&logo=github" alt="CI Status"/>
   </a>
-  <img src="https://img.shields.io/github/last-commit/abhinavshiv7/smartnotes-project?style=flat-square" alt="Last Commit"/>
-  <img src="https://img.shields.io/github/license/abhinavshiv7/smartnotes-project?style=flat-square" alt="License"/>
+  <img src="https://img.shields.io/github/last-commit/lakshitchoudhary20/smartnotes?style=flat-square" alt="Last Commit"/>
+  <img src="https://img.shields.io/github/license/lakshitchoudhary20/smartnotes?style=flat-square" alt="License"/>
 </p>
 
 </div>
@@ -55,10 +55,6 @@
 ### Notes List — After Adding Notes
 ![Notes List](screenshots/03_notes_list.png)
 > *Multiple notes displayed on the page fetched from the PostgreSQL database via the Spring Boot API.*
-
-### Deleting a Note
-![Deleting a Note](screenshots/04_delete_note.png)
-> *Clicking the Delete button on an individual note removes it via a DELETE API call.*
 
 ### Backend REST API — `/notes` Endpoint
 ![Backend API Response](screenshots/05_api_response.png)
