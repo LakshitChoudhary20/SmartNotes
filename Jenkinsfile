@@ -19,7 +19,7 @@ stages {
                 sh '''
                 ssh -i $SSH_KEY -o StrictHostKeyChecking=no ubuntu@65.2.129.28 "
 
-                if [ ! -d 'smartnotes-project' ]; then git clone https://github.com/abhinavshiv7/smartnotes-project.git; fi &&
+                if [ ! -d 'smartnotes-project' ]; then git clone https://github.com/lakshitchoudhary20/smartnotes.git; fi &&
 
                 cd smartnotes-project &&
 
