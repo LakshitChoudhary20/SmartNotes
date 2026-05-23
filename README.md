@@ -72,8 +72,8 @@
                              │
               ┌──────────────▼──────────────┐
               │       GitHub Repository      │
-              │  github.com/abhinavshiv7/    │
-              │    smartnotes-project        │
+              │  github.com/lakshitchoudhary20/    │
+              │    smartnotes        │
               └──────┬───────────┬──────────┘
                      │           │
           ┌──────────▼──┐   ┌───▼────────────┐
@@ -206,7 +206,7 @@ Jenkins Pipeline
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/abhinavshiv7/smartnotes-project.git
+git clone https://github.com/lakshitchoudhary20/smartnotes.git
 cd smartnotes-project
 
 # 2. Copy environment variables
@@ -272,8 +272,8 @@ curl http://65.2.129.28:8081/notes
 
 ## 👨‍💻 Author
 
-**Abhinav Shiv**
-- GitHub: [@abhinavshiv7](https://github.com/abhinavshiv7)
+**Lakshit**
+- GitHub: [@lakshitchoudhary20](https://github.com/lakshitchoudhary20)
 
 ---
 
